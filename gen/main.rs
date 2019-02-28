@@ -23,6 +23,8 @@ owasm-std = {{ version = "0.13", features = ["std"] }}
 owasm-ethereum = {}
 uint = {{ version = "0.4", default-features = false }}
 parity-hash = {{ version = "1.2.2", default-features = false }}
+serde = {{ version = "1.0", features = ["derive"] }}
+serde_cbor = "0.9.0"
 
 [lib]
 name = "$file_name"
