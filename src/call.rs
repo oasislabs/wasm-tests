@@ -1,11 +1,11 @@
 #![no_std]
 
-#[macro_use] extern crate pwasm_std;
-extern crate pwasm_ethereum;
+#[macro_use] extern crate owasm_std;
+extern crate owasm_ethereum;
 
-use pwasm_std::logger;
-use pwasm_std::hash::Address;
-use pwasm_ethereum::{call as ext_call, ret};
+use owasm_std::logger;
+use owasm_std::hash::Address;
+use owasm_ethereum::{call as ext_call, ret};
 
 #[no_mangle]
 pub fn call() {

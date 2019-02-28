@@ -1,10 +1,10 @@
 
 #![no_std]
 
-extern crate pwasm_std;
-extern crate pwasm_ethereum;
+extern crate owasm_std;
+extern crate owasm_ethereum;
 
-use pwasm_ethereum::{suicide, ret, input};
+use owasm_ethereum::{suicide, ret, input};
 
 #[no_mangle]
 pub fn call() {

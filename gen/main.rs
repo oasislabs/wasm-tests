@@ -3,9 +3,9 @@ use std::path::PathBuf;
 
 fn main() {
 	let args = env::args().collect::<Vec<_>>();
-	let (file_name, pwasm_ethereum_version) = match args.len() {
-		2 => (&args[1], r#""0.6.3""#.to_string()),
-		3 => (&args[1], format!(r#"{{ version = "0.7", features = [{}] }}"#, args[2].split(",").map(|s| format!(r#""{}""#, s)).collect::<Vec<_>>().join(", "))),
+	let (file_name, owasm_ethereum_version) = match args.len() {
+		2 => (&args[1], r#""0.8""#.to_string()),
+		3 => (&args[1], format!(r#"{{ version = "0.8", features = [{}] }}"#, args[2].split(",").map(|s| format!(r#""{}""#, s)).collect::<Vec<_>>().join(", "))),
 		_ => {
 			println!("Usage: {} gen <test.rs>", args[0]);
 			return;
@@ -19,9 +19,9 @@ version = "0.1.0"
 authors = ["NikVolf <nikvolf@gmail.com>"]
 
 [dependencies]
-pwasm-std = "0.10.0"
-pwasm-ethereum = {}
-uint = {{ version = "0.3", default-features = false }}
+owasm-std = {{ version = "0.13", features = ["std"] }}
+owasm-ethereum = {}
+uint = {{ version = "0.4", default-features = false }}
 parity-hash = {{ version = "1.2.2", default-features = false }}
 
 [lib]
@@ -30,10 +30,11 @@ path = "main.rs"
 crate-type = ["cdylib"]
 
 [profile.release]
+incremental = false
 panic = "abort"
 lto = true
 opt-level = "z"
-"#, pwasm_ethereum_version);
+"#, owasm_ethereum_version);
 
 	let target_toml = toml.replace("$file_name", file_name);
 

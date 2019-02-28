@@ -2,9 +2,9 @@
 
 extern crate uint;
 
-extern crate pwasm_ethereum;
+extern crate owasm_ethereum;
 
-use pwasm_ethereum::{ret, input};
+use owasm_ethereum::{ret, input};
 use uint::U256;
 
 #[no_mangle]

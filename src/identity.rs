@@ -1,6 +1,6 @@
 #![no_std]
 
-extern crate pwasm_ethereum as ext;
+extern crate owasm_ethereum as ext;
 
 #[no_mangle]
 pub fn call() {

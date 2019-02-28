@@ -1,8 +1,8 @@
 #![no_std]
 
-extern crate pwasm_std;
+extern crate owasm_std;
 
-use pwasm_std::logger;
+use owasm_std::logger;
 
 #[no_mangle]
 pub fn call() {

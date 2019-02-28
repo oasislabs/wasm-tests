@@ -1,10 +1,10 @@
 #![no_std]
 
-extern crate pwasm_std;
-extern crate pwasm_ethereum;
+extern crate owasm_std;
+extern crate owasm_ethereum;
 
-use pwasm_std::keccak;
-use pwasm_ethereum::{ret, input};
+use owasm_std::keccak;
+use owasm_ethereum::{ret, input};
 
 #[no_mangle]
 pub fn call() {

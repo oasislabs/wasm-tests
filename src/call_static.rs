@@ -1,12 +1,12 @@
 #![no_std]
 #![allow(deprecated)]
 
-#[macro_use] extern crate pwasm_std;
-extern crate pwasm_ethereum;
+#[macro_use] extern crate owasm_std;
+extern crate owasm_ethereum;
 
-use pwasm_std::{write_u32, logger};
-use pwasm_std::hash::Address;
-use pwasm_ethereum::{static_call, ret};
+use owasm_std::{write_u32, logger};
+use owasm_std::hash::Address;
+use owasm_ethereum::{static_call, ret};
 use core::hash::{SipHasher, Hasher};
 
 #[no_mangle]

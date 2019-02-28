@@ -1,9 +1,9 @@
 #![no_std]
 
-extern crate pwasm_std;
-extern crate pwasm_ethereum as ext;
+extern crate owasm_std;
+extern crate owasm_ethereum as ext;
 
-use pwasm_std::Vec;
+use owasm_std::Vec;
 
 #[no_mangle]
 pub fn call() {

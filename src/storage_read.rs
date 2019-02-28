@@ -1,11 +1,11 @@
 #![no_std]
 
-extern crate pwasm_std;
-extern crate pwasm_ethereum;
+extern crate owasm_std;
+extern crate owasm_ethereum;
 
-use pwasm_std::write_u32;
-use pwasm_std::hash::H256;
-use pwasm_ethereum::{ret, read};
+use owasm_std::write_u32;
+use owasm_std::hash::H256;
+use owasm_ethereum::{ret, read};
 
 fn get_value_from_key(key: u32) -> [u8; 32] {
 	let mut full_key = [0u8; 32];

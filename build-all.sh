@@ -22,4 +22,5 @@ set -e
 ./build-rust-test.sh storage_read
 ./build-rust-test.sh math
 ./build-rust-test.sh setter
+./build-rust-test.sh syscall
 ./build-wat.sh recursive
