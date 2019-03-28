@@ -13,6 +13,7 @@ set -e
 ./build-rust-test.sh empty
 ./build-rust-test.sh externs
 ./build-rust-test.sh events
+./build-rust-test.sh fetch_return
 ./build-rust-test.sh identity
 ./build-rust-test.sh logger
 ./build-rust-test.sh realloc
