@@ -2,8 +2,9 @@
     (import "env" "fetch_input" (func $fetch_input (param i32)))
     (import "env" "input_length" (func $input_length (result i32)))
     (import "env" "ret" (func $ret (param i32) (param i32)))
+    (import "env" "memory" (memory 1 65535))
 
-    (func (export "call")
+    (func $call
         ;; Assert that input_length is exactly 1 byte long.
         (if
             (i32.ne
@@ -25,7 +26,7 @@
         )
     )
 
-    (func (export "func")
+    (func $func
         ;; Assert that input_length is exactly 2 bytes long.
         (if
             (i32.ne
@@ -48,6 +49,7 @@
         )
     )
 
-    (memory 1)
-    (export "memory" (memory 0))
+    (table 0 funcref)
+    (export "call" (func $call))
+    (export "func" (func $func))
 )
