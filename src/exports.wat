@@ -25,7 +25,7 @@
         )
     )
 
-    (func (export "extern_func")
+    (func (export "func")
         ;; Assert that input_length is exactly 2 bytes long.
         (if
             (i32.ne
